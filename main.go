@@ -1,7 +1,15 @@
 package main
 
-import "github.com/andrestc/learn-go/utils"
+import (
+	"fmt"
+)
+
+func say(s string) {
+	fmt.Print(s)
+}
 
 func main() {
-	utils.Greet("Fulano.")
+	defer say(" possível")
+	say("Viajar é")
+	panic("socorro!")
 }
